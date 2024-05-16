@@ -14,6 +14,7 @@ function ListaDeTarefas() {
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
             userId = user.uid
+            //console.log(user)
 
         } else {
             window.location.href = "/cadastro"
