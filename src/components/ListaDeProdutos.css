@@ -1,8 +1,15 @@
-.lista-de-tarefas {
+.lista-de-produtos {
     max-width: 400px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
     position: relative;
+
+    h1 {
+      color: #e0ebea;
+      align-items: center;
+      text-align: center;
+      margin: 20px 0;
+    }
   }
   
   .botao-flutuante {
@@ -18,7 +25,7 @@
     border: none;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    z-index: 1; /* Para garantir que o botão flutuante esteja sobre a lista de tarefas */
+    z-index: 1; /* Para garantir que o botão flutuante esteja sobre a lista de produtos */
     transition: bottom 0.3s ease; /* Efeito de transição suave */
   }
   
@@ -26,18 +33,18 @@
     background-color: #0056b3;
   }
   
-  .adicionar-tarefa {
+  .adicionar-produto {
     margin-bottom: 20px;
   }
   
-  .adicionar-tarefa input {
+  .adicionar-produto input {
     padding: 8px;
     margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   
-  .adicionar-tarefa button {
+  .adicionar-produto button {
     padding: 8px 16px;
     border: none;
     background-color: #007bff;
@@ -46,7 +53,7 @@
     cursor: pointer;
   }
   
-  .tarefa {
+  .produto {
     list-style: none;
     position: relative; /* Para garantir que o botão de exclusão esteja posicionado corretamente */
     background-color: #f9f9f9;
@@ -56,15 +63,15 @@
     transition: transform 0.3s ease; /* Efeito de transição suave para a exclusão */
   }
   
-  .tarefa:hover {
-    transform: translateX(-20px); /* Desliza a tarefa para a esquerda quando o mouse passa por cima */
+  .produto:hover {
+    transform: translateX(-20px); /* Desliza a produto para a esquerda quando o mouse passa por cima */
   }
   
-  .tarefa:hover .remover-tarefa {
-    display: block; /* Exibe o botão de exclusão ao passar o mouse sobre a tarefa */
+  .produto:hover .remover-produto {
+    display: block; /* Exibe o botão de exclusão ao passar o mouse sobre a produto */
   }
   
-  .remover-tarefa {
+  .remover-produto {
     display: none; /* Inicialmente oculta o botão de exclusão */
     position: absolute;
     top: 50%;
@@ -75,7 +82,7 @@
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
-    z-index: 2; /* Garante que o botão de exclusão esteja sobre a tarefa */
+    z-index: 2; /* Garante que o botão de exclusão esteja sobre a produto */
   }
 
   .botao-logout {

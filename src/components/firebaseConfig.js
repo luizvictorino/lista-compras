@@ -1,21 +1,23 @@
 import firebase from 'firebase/compat/app';
-import 'firebase/compat/database';
-import 'firebase/compat/auth'; 
+import 'firebase/compat/firestore';
+import 'firebase/compat/auth';
 
 
+
+// Configurações do Firebase
 const firebaseConfig = {
-  apiKey: "",
-  authDomain: "..com",
-  databaseURL: "https://-default-rtdb.firebaseio.com",
-  projectId: "",
-  storageBucket: ".appspot.com",
-  messagingSenderId: "",
-  appId: "1:429631871423:",
-  measurementId: "G-"
-}
+  apiKey: "AIzaSyAPzk95v3hDaboNr7E21LJt4CDDKvkEqyg",
+  authDomain: "lista-de-compra-95749.firebaseapp.com",
+  projectId: "lista-de-compra-95749",
+  storageBucket: "lista-de-compra-95749.appspot.com",
+  messagingSenderId: "189132411574",
+  appId: "1:189132411574:web:863279253ec6e596588c17"
+};
 
-// Inicialize o Firebase
-// Delete o Firebase App existente, se existir
+/**
+ * Inicializa o Firebase com a configuração fornecida.
+ * Se houver um aplicativo Firebase existente, ele será excluído e re-inicializado.
+ */
 if (firebase.apps.length) {
   firebase.apps[0].delete()
     .then(() => {
@@ -32,3 +34,5 @@ if (firebase.apps.length) {
 }
 
 export default firebase;
+export const firestore = firebase.firestore();
+export const auth = firebase.auth();

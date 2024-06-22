@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom"
 import { Login } from "./components/login"
-import ListaDeTarefas from "./components/ListaDeTarefas"
+import ListaDeProdutos from "./components/ListaDeProdutos"
 import ProfilePage from "./components/Perfil"
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/cadastro" />} />
         <Route path="/cadastro" element={<Login />} />
-        <Route path="/lista-tarefas" element={<ListaDeTarefas />} />
+        <Route path="/lista-produtos" element={<ListaDeProdutos />} />
         <Route path="/perfil" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
